@@ -17,18 +17,23 @@ function displayCars(cars) {
     var carList = document.getElementById('carList');
     carList.innerHTML = '';
     cars.forEach(function(car) {
-        // let carImg = car.make + car.model + ".jpg";
-        let carImg = `./assets/img/${car.make} ${car.model}.jpg`;
+        // let carImg = `./assets/img/${car.make} ${car.model}.jpg`;
+        let carImg = `./assets/img/${car.image}`
         var carElement = document.createElement('div');
         carElement.classList.add('car');
         carElement.innerHTML = `
-        <h2>${car.make} ${car.model}</h2>
         <img src="${carImg}" alt="${car.make} ${car.model}">
         <div class="car-details">
-            <p>Year: ${car.year}</p>
-            <p>Mileage: ${car.mileage}</p>
-            <p>Price: ${car.price}</p>
-            <p>Color: ${car.color}</p>
+            <div><h1>${car.make} ${car.model}</h1></div>
+            <div class="car-details-2">
+                <p>Year: ${car.year}</p>
+                <p>Mileage: ${car.mileage}</p>
+                <p>Price: ${car.price}</p>
+                <div class="car-color-section">
+                    <p>Color: ${car.color}</p>
+                    <span class="color-container" style="background-color: ${car.color}"></span>
+                </div>
+            </div>
         </div>
         `;
         carList.appendChild(carElement);
@@ -37,3 +42,8 @@ function displayCars(cars) {
 
 // Initial display of all cars
 displayCars(usedCars);
+
+// // print every make model combo to the console
+// usedCars.forEach(function(car) {
+//     console.log(`${car.make} ${car.model}.jpg`);
+// });

@@ -13,7 +13,7 @@ form {
     justify-content: space-between;
 }
 
-.car {
+/* .car {
     border: 1px solid #ccc;
     margin-bottom: 20px;
     padding: 10px;
@@ -22,5 +22,23 @@ form {
 
 .car img {
     width: 100%;
+    height: auto;
+} */
+
+.car {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+    background-color: #f8f9fa;
+
+    max-height: 400px;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+.car img {
+    max-width: 100%;
     height: auto;
 }

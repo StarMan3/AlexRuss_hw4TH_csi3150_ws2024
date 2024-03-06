@@ -7,6 +7,7 @@ const usedCars = [
     price: 18000,
     color: "Silver",
     gasMileage: "25 mpg city, 35 mpg highway",
+    image: "Toyota Camry.jpg"
   },
   {
     year: 2016,
@@ -16,6 +17,7 @@ const usedCars = [
     price: 14000,
     color: "White",
     gasMileage: "30 mpg city, 40 mpg highway",
+    image: "Honda Civic.jpg"
   },
   {
     year: 2017,
@@ -25,6 +27,7 @@ const usedCars = [
     price: 16000,
     color: "Black",
     gasMileage: "28 mpg city, 38 mpg highway",
+    image: "Ford Fusion.jpg"
   },
   {
     year: 2019,
@@ -34,6 +37,7 @@ const usedCars = [
     price: 17000,
     color: "Blue",
     gasMileage: "27 mpg city, 36 mpg highway",
+    image: "Nissan Altima.jpg"
   },
   {
     year: 2015,
@@ -43,6 +47,7 @@ const usedCars = [
     price: 12000,
     color: "Red",
     gasMileage: "25 mpg city, 37 mpg highway",
+    image: "Chevrolet Malibu.png"
   },
   // Additional entries:
   {
@@ -53,6 +58,7 @@ const usedCars = [
     price: 15000,
     color: "Gray",
     gasMileage: "29 mpg city, 40 mpg highway",
+    image: "Volkswagen Passat.png"
   },
   {
     year: 2020,
@@ -62,6 +68,7 @@ const usedCars = [
     price: 16000,
     color: "Silver",
     gasMileage: "30 mpg city, 41 mpg highway",
+    image: "Hyundai Elantra.jpg"
   },
   {
     year: 2014,
@@ -71,6 +78,7 @@ const usedCars = [
     price: 14000,
     color: "Green",
     gasMileage: "22 mpg city, 30 mpg highway",
+    image: "Subaru Outback.jpg"
   },
   {
     year: 2017,
@@ -80,6 +88,7 @@ const usedCars = [
     price: 19000,
     color: "Blue",
     gasMileage: "24 mpg city, 31 mpg highway",
+    image: "Mazda CX-5.jpg"
   },
   {
     year: 2018,
@@ -89,6 +98,7 @@ const usedCars = [
     price: 17000,
     color: "White",
     gasMileage: "22 mpg city, 29 mpg highway",
+    image: "Kia Sorento.jpg"
   },
   // Five more entries:
   {
@@ -99,6 +109,7 @@ const usedCars = [
     price: 24000,
     color: "Black",
     gasMileage: "19 mpg city, 30 mpg highway",
+    image: "Dodge Challenger.jpg"
   },
   {
     year: 2017,
@@ -108,6 +119,7 @@ const usedCars = [
     price: 32000,
     color: "Red",
     gasMileage: "19 mpg city, 27 mpg highway",
+    image: "Cadillac XT5.jpg"
   },
   {
     year: 2018,
@@ -117,6 +129,7 @@ const usedCars = [
     price: 38000,
     color: "Blue",
     gasMileage: "18 mpg city, 23 mpg highway",
+    image: "Jaguar F-PACE.jpg"
   },
   {
     year: 2019,
@@ -126,6 +139,7 @@ const usedCars = [
     price: 55000,
     color: "Black",
     gasMileage: "Electric (370 miles per charge)",
+    image: "Tesla Model S.png"
   },
   {
     year: 2020,
@@ -135,6 +149,7 @@ const usedCars = [
     price: 68000,
     color: "White",
     gasMileage: "20 mpg city, 26 mpg highway",
+    image: "Porsche Cayenne.jpg"
   },
   {
     year: 2017,
@@ -144,6 +159,7 @@ const usedCars = [
     price: 26000,
     color: "White",
     gasMileage: "21 mpg city, 30 mpg highway",
+    image: "Lexus ES.jpg"
   },
   {
     year: 2016,
@@ -153,7 +169,8 @@ const usedCars = [
     price: 27000,
     color: "Black",
     gasMileage: "23 mpg city, 34 mpg highway",
+    image: "BMW 5 Series.jpg"
   },
 ];
 
-module.exports = usedCars;
+// module.exports = usedCars;
