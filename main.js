@@ -22,12 +22,14 @@ function displayCars(cars) {
         var carElement = document.createElement('div');
         carElement.classList.add('car');
         carElement.innerHTML = `
-            <h2>${car.make} ${car.model}</h2>
-            <img src="${carImg}" alt="${car.make} ${car.model}">
+        <h2>${car.make} ${car.model}</h2>
+        <img src="${carImg}" alt="${car.make} ${car.model}">
+        <div class="car-details">
             <p>Year: ${car.year}</p>
             <p>Mileage: ${car.mileage}</p>
             <p>Price: ${car.price}</p>
             <p>Color: ${car.color}</p>
+        </div>
         `;
         carList.appendChild(carElement);
     });
