@@ -39,6 +39,8 @@ document.getElementById('filterForm').addEventListener('submit', function (event
 function displayCars(cars) {
     console.log("displayCars called");
     var carList = document.getElementById('carList');
+    var noCarsMessage = document.getElementById('noCarsMessage');
+    noCarsMessage.style.display = cars.length === 0 ? 'block' : 'none';
     carList.innerHTML = '';
     cars.forEach(function (car) {
         // let carImg = `./assets/img/${car.make} ${car.model}.jpg`;
