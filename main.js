@@ -1,27 +1,15 @@
 // main.js
 
-// document.getElementById('filterForm').addEventListener('submit', function(event) {
-//     event.preventDefault();
-//     var minYear = document.getElementById('minYear').value;
-//     var maxYear = document.getElementById('maxYear').value;
-//     // Get other filter values here
-//     var filteredCars = usedCars.filter(function(car) {
-//         return car.year >= minYear && car.year <= maxYear;
-//         // Add other filter conditions here
-//     });
-//     displayCars(filteredCars);
-// });
-
-document.getElementById('filterForm').addEventListener('submit', function(event) {
+document.getElementById('filterForm').addEventListener('submit', function (event) {
     event.preventDefault();
     var minYear = document.getElementById('minYear').value;
     var maxYear = document.getElementById('maxYear').value;
-    // var make = Array.from(document.getElementById('makeFilter').selectedOptions).map(option => option.value);
     var maxMileage = document.getElementById('maxMileage').value;
     var minPrice = document.getElementById('minPrice').value;
     var maxPrice = document.getElementById('maxPrice').value;
+    // var make = Array.from(document.getElementById('makeFilter').selectedOptions).map(option => option.value);
     // var color = Array.from(document.getElementById('color').selectedOptions).map(option => option.value);
-    
+
     const makeFilterCheckboxes = document.querySelectorAll('input[name="make"]');
     const colorFilterCheckboxes = document.querySelectorAll('input[name="colorFilter"]');
     const selectedMake = Array.from(makeFilterCheckboxes)
@@ -37,10 +25,8 @@ document.getElementById('filterForm').addEventListener('submit', function(event)
     minPrice = minPrice ? parseInt(minPrice) : 0;
     maxPrice = maxPrice ? parseInt(maxPrice) : Infinity;
 
-    var filteredCars = usedCars.filter(function(car) {
+    var filteredCars = usedCars.filter(function (car) {
         return car.year >= minYear && car.year <= maxYear &&
-            // make.includes(car.make) &&
-            // color.includes(car.color);
             (selectedMake.length === 0 || selectedMake.includes(car.make)) &&
             (selectedColors.length === 0 || selectedColors.includes(car.color)) &&
             car.mileage <= maxMileage &&
@@ -54,7 +40,7 @@ function displayCars(cars) {
     console.log("displayCars called");
     var carList = document.getElementById('carList');
     carList.innerHTML = '';
-    cars.forEach(function(car) {
+    cars.forEach(function (car) {
         // let carImg = `./assets/img/${car.make} ${car.model}.jpg`;
         let carImg = `./assets/img/${car.image}`
         var carElement = document.createElement('div');
@@ -80,8 +66,3 @@ function displayCars(cars) {
 
 // Initial display of all cars
 displayCars(usedCars);
-
-// // print every make model combo to the console
-// usedCars.forEach(function(car) {
-//     console.log(`${car.make} ${car.model}.jpg`);
-// });
