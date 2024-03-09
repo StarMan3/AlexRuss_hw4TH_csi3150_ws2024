@@ -1,14 +1,52 @@
 // main.js
 
+// document.getElementById('filterForm').addEventListener('submit', function(event) {
+//     event.preventDefault();
+//     var minYear = document.getElementById('minYear').value;
+//     var maxYear = document.getElementById('maxYear').value;
+//     // Get other filter values here
+//     var filteredCars = usedCars.filter(function(car) {
+//         return car.year >= minYear && car.year <= maxYear;
+//         // Add other filter conditions here
+//     });
+//     displayCars(filteredCars);
+// });
+
 document.getElementById('filterForm').addEventListener('submit', function(event) {
     event.preventDefault();
     var minYear = document.getElementById('minYear').value;
     var maxYear = document.getElementById('maxYear').value;
-    // Get other filter values here
+    // var make = Array.from(document.getElementById('makeFilter').selectedOptions).map(option => option.value);
+    var maxMileage = document.getElementById('maxMileage').value;
+    var minPrice = document.getElementById('minPrice').value;
+    var maxPrice = document.getElementById('maxPrice').value;
+    // var color = Array.from(document.getElementById('color').selectedOptions).map(option => option.value);
+    
+    const makeFilterCheckboxes = document.querySelectorAll('input[name="make"]');
+    const colorFilterCheckboxes = document.querySelectorAll('input[name="colorFilter"]');
+    const selectedMake = Array.from(makeFilterCheckboxes)
+        .filter((checkbox) => checkbox.checked)
+        .map((checkbox) => checkbox.value);
+    const selectedColors = Array.from(colorFilterCheckboxes)
+        .filter((checkbox) => checkbox.checked)
+        .map((checkbox) => checkbox.value);
+
+    minYear = minYear ? parseInt(minYear) : 0;
+    maxYear = maxYear ? parseInt(maxYear) : Infinity;
+    maxMileage = maxMileage ? parseInt(maxMileage) : Infinity;
+    minPrice = minPrice ? parseInt(minPrice) : 0;
+    maxPrice = maxPrice ? parseInt(maxPrice) : Infinity;
+
     var filteredCars = usedCars.filter(function(car) {
-        return car.year >= minYear && car.year <= maxYear;
-        // Add other filter conditions here
+        return car.year >= minYear && car.year <= maxYear &&
+            // make.includes(car.make) &&
+            // color.includes(car.color);
+            (selectedMake.length === 0 || selectedMake.includes(car.make)) &&
+            (selectedColors.length === 0 || selectedColors.includes(car.color)) &&
+            car.mileage <= maxMileage &&
+            car.price >= minPrice && car.price <= maxPrice;
     });
+
     displayCars(filteredCars);
 });
 

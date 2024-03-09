@@ -13,18 +13,6 @@ form {
     justify-content: space-between;
 }
 
-/* .car {
-    border: 1px solid #ccc;
-    margin-bottom: 20px;
-    padding: 10px;
-    width: calc(33% - 20px);
-}
-
-.car img {
-    width: 100%;
-    height: auto;
-} */
-
 .car {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     max-width: 300px;
@@ -41,4 +29,14 @@ form {
 .car img {
     max-width: 100%;
     height: auto;
+}
+
+.subcontainer {
+    display: flex;
+    /* justify-content: space-between;
+    margin-top: 20px; */
+}
+
+.subcontainer > label {
+    margin-right: 10px;
 }
